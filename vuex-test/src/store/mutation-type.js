@@ -1,0 +1,5 @@
+export const SET_USE_NAME = 'SET_USE_NAME'
+export const SET_USE_AGE = 'SET_USE_AGE'
+export const SET_USE = 'SET_USE'
+export const SET_FOODS = 'SET_FOODS'
+export const SET_CART = 'SET_CART'
