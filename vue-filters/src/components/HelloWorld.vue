@@ -110,7 +110,7 @@ export default {
       console.log(args);
       console.log(km);
       if(km==1){
-        return 'ypxypx' +'love' +'高丹';
+        return 'ypx'+'ypx' +'love' +'高丹';
       }else{
         return value+args+'高丹'
       }
