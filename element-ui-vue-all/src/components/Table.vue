@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h2>表格组件的使用</h2>
         <el-table :data="tableData" style="width: 100%" stripe border :row-class-name="tableRowClassName" max-height="400" ref="selectTable" highlight-current-row @current-change="handleCurrentChange" :default-sort="{prop: 'date', order: 'zim'}" show-summary sum-text="合计" :span-method="summaryMths">
             <el-table-column type="selection" width="55" ></el-table-column>
             <el-table-column  type="index" width="50" fixed label="序号"></el-table-column>
@@ -53,7 +54,7 @@
             </el-table-column>
         </el-table>
     <div style="margin-top: 20px">
-        <el-button @click="setCurrent(tableData[0])">选中第二行</el-button>
+        <el-button @click="setCurrent(tableData[0])">选中第一行</el-button>
         <el-button @click="setCurrent()">取消选择</el-button>
     </div>
     </div>
