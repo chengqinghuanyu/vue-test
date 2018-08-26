@@ -149,4 +149,9 @@ color:{
     disabled禁用状态
     text文字按钮
     icon="图标icon名称"图标按钮
+    el-button-group按钮组
+    :loading="true"设置为true就启用了laoding
+    size={
+        small\min\medium来设置
+    }
 }
