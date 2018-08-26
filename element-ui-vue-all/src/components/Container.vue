@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h2>容器</h2>
         <el-container style="height:500px;border:1px solid #ddd">
             <el-aside width="200px" style="background-color:rgba(238,241,246)">
                 <el-menu :default-openeds="['1','3']">

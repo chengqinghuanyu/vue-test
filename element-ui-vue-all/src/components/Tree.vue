@@ -1,10 +1,21 @@
 <template>
     <div>
-        <router-link to="/tree/treecustom">自定义</router-link>
-        <router-link to="/tree/filter">过滤</router-link>
-        <router-link to="/tree/accordion">手拉风琴</router-link>
-        <router-link to="/tree/dragable">可拓拽</router-link>
-        <router-view ></router-view>
+        <h2>树型结构</h2>
+        <div>
+            <el-container type="flex" class="custom-main">
+                <el-aside width="102px" type="flex" justify="start"> 
+                    <router-link class="set-w" to="/tree/treecustom">自定义</router-link>
+                    <router-link  class="set-w" to="/tree/filter">过滤</router-link>
+                    <router-link  class="set-w" to="/tree/accordion">手拉风琴</router-link>
+                    <router-link  class="set-w" to="/tree/dragable">可拓拽</router-link>
+                </el-aside>
+                <el-main width="100%">
+                    <router-view title="暂无数据"></router-view>
+                </el-main>
+            </el-container>
+        </div>
+       
+        
         <h2>基础用法</h2>
         <el-tree :data="datas" :props="defualtProps" @node-click="handleClick">
         </el-tree>
@@ -387,7 +398,23 @@ export default {
 }
 </script>
 <style scoped>
-
+.set-w{
+    width: 100px;
+    display: block;
+    text-align: left;
+}
+.custom-main{
+}
+.el-main{
+    padding: 0;
+    border:1px solid #d0d0d0;     
+}
+.el-aside{
+    border:1px solid #d0d0d0;  
+}
+.el-main h2{
+            margin:0
+        }
 </style>
 
 

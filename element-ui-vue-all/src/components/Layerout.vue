@@ -1,8 +1,8 @@
 
 <template>
 <div>
+  <h2>布局</h2>
 <el-row>
-
       <el-col :span="24">
         <div class="grid-content bg-purple-dark"></div>
       </el-col>
