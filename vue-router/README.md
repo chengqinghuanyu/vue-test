@@ -57,6 +57,45 @@ replaceState,的参数和pushState的参数相同，在作用上仅有的差异�
 popState是不会被pushState、replaceState触发的只有当history.go\history.back\history.forward才会触发。
 
 
+在实际使用中使用
+var router = new VueRouter({
+    mode: 'hash',//设置路由模式
+    linkActiveClass: 'u-link--Active', // 这是链接激活时的class
+    routers:[{
+        path:'/',
+        component:'Home',
+        redirect:'/params/:newsId(\\d+)/:newsTitle'//重定向
+        children:[{//路由嵌套
+            path:'/child',
+            component:'Child',//还可以使用一个对象定义一个名词然后使用router-view的name属性和这个名称进行关联。
+            component:{
+                defualt:Child,
+                name:'pac',
+                //使用路由的别名
+                alias: '/b',
+                 beforeEnter: (to, from, next) => {
+        // to是要进入的路由
+        from:是要离开的路由
+        next:是确保进行下一步执行的方法
+      },
+      meta:{//路由原信息$route.matched 来检查路由记录中的 meta 字段。
+
+      }
+            }
+        }]
+    }]
+})
+
+可以通过this.$route.params.id来查找到id
+
+监听路由变化有两种方式一种是使用watch的方式
+watch:{
+    'child'(){
+
+    }
+}
+
+
 
 
 

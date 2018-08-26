@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/chengqinghuanyu/vue-test/issues"
   },
-  "homepage": "https://github.com/chengqinghuanyu/vue-test#readme"
+  "homepage": "https://github.com/chengqinghuanyu/vue-test#readme",
+  "dependencies": {}
 }

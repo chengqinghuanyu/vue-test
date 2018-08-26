@@ -1,0 +1,152 @@
+1、安装element-ui
+2、安装scss
+3、引入element-ui
+4、引入element-ui的样式
+5、在组件中使用
+6、布局原理：使用了24列的模式其中相应式与bootstrap的响应式类似{
+    el-row {
+        :gutter设置布局的列间距一像素为主
+    }
+    el-col:{
+        :span="数字用于分栏目的宽度比例各个宽度之和是24就好"
+        class="gride-content bg-purple"
+        class="gride-content bg-purple-height"
+        offset:设置分栏的偏移量
+        type{
+            flex:启用flex
+        }
+        justify:{
+            设置对齐方式：center,end,start,space-between,space-around
+        }
+
+    }
+    
+
+
+    
+}
+相应尺寸的设置{
+    xs：很小
+    sm：小
+    md：中等
+    lg：大
+    xl：超大
+}
+
+容器
+el-container
+el-header
+el-footer
+el-aside
+el-main
+
+el-container{
+    el-header:垂直布局
+    el-footer:垂直布局
+    main:{
+        水平布局
+    }
+    el-aside:左列布局
+    之间是互相嵌套
+}
+
+color:{
+    主色-Blue,success,warning,danger,info
+    中性色—#303133,#606266,#909399,#c0c4cc
+    边框：#dcdfe6\#e4e7ed\#ebeef5\#f2f6fc
+}
+字体：
+{
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+字号{
+    20、18、16、14、12
+}
+图标{
+    el-icon-info
+    el-icon-error
+    el-icon-sucess
+    el-icon-warning
+    el-icon-question
+    el-icon-back
+    el-icon-arrow-left
+    el-icon-arrow-right
+    el-icon-arrow-down
+    el-icon-arrow-up
+    el-icon-caret-left
+    el-icon-caret-right
+    el-icon-caret-up
+    el-icon-caret-down
+    el-icon-d-left
+    el-icon-d-right
+    el-icon-minus
+    el-icon-plus
+    el-icon-remove
+    el-icon-cicle-plus
+    el-icon-remove-outline
+    el-icon-plus-outline
+    el-icon-close
+    el-icon-check
+    el-icon-circle-close
+    el-icon-circle-check
+    el-icon-circle-check-outline
+    el-icon-circle-close-outline
+    el-icon-zoom-out
+    el-icon-zoom-in
+    el-icon-d-caret
+    el-icon-sort
+    el-icon-sort-down
+    el-icon-sort-up
+    el-icon-tickets
+    el-icon-document
+    el-icon-goods
+    el-icon-sold-out
+    el-icon-news
+    el-icon-message
+    el-icon-date
+    el-icon-printer
+    el-icon-time
+    el-icon-bell
+    el-icon-mobile-phone
+    el-icon-service
+    el-icon-view
+    el-icon-menu
+    el-icon-more
+    el-icon-more-outline
+    el-icon-star-off
+    el-icon-star-on
+    el-icon-location
+    el-icon-location-outline
+    el-icon-phone
+    el-icon-phone-outline
+    el-icon-picture
+    el-icon-picture-outline
+    el-icon-dalete
+    el-icon-search
+    el-icon-edit
+    el-icon-edit-outline
+    el-icon-rank
+    el-icon-refresh
+    el-icon-share
+    el-icon-setting
+    el-icon-upload
+    el-icon-upload2
+    el-icon-download
+    el-icon-loading
+}
+按钮：{
+    el-button
+    type={
+        primary
+        success
+        info
+        warning
+        danger
+    }
+    朴素按钮：plain
+    round圆角按钮
+    circle圆形按钮
+    disabled禁用状态
+    text文字按钮
+    icon="图标icon名称"图标按钮
+}
