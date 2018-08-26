@@ -1,10 +1,10 @@
 <template>
     <div>
         <router-link to="/tree/treecustom">自定义</router-link>
-         <router-link to="/tree/filter">过滤</router-link>
-         <router-link to="/tree/accordion">手拉风琴</router-link>
-         <router-link to="/tree/dragable">可拓拽</router-link>
-        
+        <router-link to="/tree/filter">过滤</router-link>
+        <router-link to="/tree/accordion">手拉风琴</router-link>
+        <router-link to="/tree/dragable">可拓拽</router-link>
+        <router-view ></router-view>
         <h2>基础用法</h2>
         <el-tree :data="datas" :props="defualtProps" @node-click="handleClick">
         </el-tree>
@@ -30,7 +30,7 @@
             <el-button @click="setCheckedNodes">通过node设置</el-button>
             <el-button @click="resetChecked">清空</el-button>
         </div>
-        <router-view ></router-view>
+        
 
     </div>
 </template>
