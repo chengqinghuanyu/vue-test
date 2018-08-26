@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <h2>element-ui的可拖拽方法</h2>
         <el-tree :data="datas" :props="defaultProps" node-key="id" default-expand-all 
         @node-drag-start="handleDragStart"  
         @node-drag-enter="handleDragEnter"
