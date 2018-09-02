@@ -9,6 +9,8 @@
     <router-link to="/radio">单选</router-link>
     <router-link to="/selfComponent">自定义组件</router-link>
     <router-link to="/checkboxs">多选框</router-link>
+     <router-link to="/mymodeltest">input-model</router-link>
+     <router-link to="chinaareadata">地址</router-link>
     <router-view/>
     <footer>{{autor}}</footer>
   </div>

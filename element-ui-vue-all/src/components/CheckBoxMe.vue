@@ -1,6 +1,6 @@
 <template>
     <div>
-        <my-checkbox :all="MyAll" :indeter="MyIndeter" :names="MyName" :children="MyChildren" :sls="MySls"  @select-bk-op="selectAll" @select-this-datas="selectThisOptions"></my-checkbox>
+        <my-checkbox :value="getVal" :all.sync="MyAll" :indeter="MyIndeter" :names="MyName" :children="MyChildren" :sls="MySls"  @select-bk-op="selectAll" @select-this-datas="selectThisOptions"></my-checkbox>
     </div>
 </template>
 <script>
@@ -13,7 +13,8 @@ export default {
             MyIndeter:true,
             MyName:"",
             MySls:[],
-            MyChildren:[]
+            MyChildren:[],
+            getVal:""
         }
     },
     components:{
@@ -33,12 +34,13 @@ export default {
     
     this.MyChildren=datas
     this.MyAll = false
-    this.MyIndeter=false;
+    this.MyIndeter=true;
     this.MyName="全选";
     this.MySls=[{
                         label:'北京',
                         value:'bj'
                     }];
+    this.getVal=""
         
     },
     methods:{

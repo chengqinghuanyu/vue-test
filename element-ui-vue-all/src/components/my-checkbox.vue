@@ -16,7 +16,8 @@ export default {
         
         indeter:Boolean,
         names:String,
-        children:Array
+        children:Array,
+        value:String
     },
     computed: {
     },
@@ -29,8 +30,14 @@ export default {
     methods:{
         selectAll(value){
             console.log(value)
-            
-            this.$emit('select-bk-op',
+            const formData = { ...this.sls }
+            // 设置默认值
+            this.sls.forEach(({ key, value }) => {
+            if (formData[key] === undefined || formData[key] === null) {
+            formData[key] = value
+            }
+            })
+            this.$emit('update:select-bk-op',
             value);
         },
         handleCheckedCitiesChange(value){

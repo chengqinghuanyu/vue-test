@@ -13,6 +13,8 @@ import Dragable from '@/components/Dragable'
 import Radio from '@/components/Radio'
 import SelfComponent from '@/components/SelfComponent'
 import CheckBoxMe from '@/components/CheckBoxMe'
+import MyModelTest from '@/components/MyModelTest'
+import ChinaProAreaData from '@/components/ChinaProAreaData'
 Vue.use(Router)
 
 export default new Router({
@@ -72,5 +74,13 @@ export default new Router({
         name: 'CheckBoxMe',
         path: '/checkboxs',
         component: CheckBoxMe
+    }, {
+        name: 'MyModelTest',
+        path: '/mymodeltest',
+        component: MyModelTest
+    }, {
+        name: 'ChinaProAreaData',
+        path: '/chinaareadata',
+        component: ChinaProAreaData
     }]
 })
