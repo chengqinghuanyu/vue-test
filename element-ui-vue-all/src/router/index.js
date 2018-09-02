@@ -10,7 +10,9 @@ import Treecustom from '@/components/Treecustom'
 import Filter from '@/components/Filter'
 import Accordion from '@/components/Accordion'
 import Dragable from '@/components/Dragable'
-
+import Radio from '@/components/Radio'
+import SelfComponent from '@/components/SelfComponent'
+import CheckBoxMe from '@/components/CheckBoxMe'
 Vue.use(Router)
 
 export default new Router({
@@ -58,5 +60,17 @@ export default new Router({
                 component: Dragable
             }
         ]
+    }, {
+        name: 'Radio',
+        path: '/radio',
+        component: Radio
+    }, {
+        name: 'SelfComponent',
+        path: '/selfComponent',
+        component: SelfComponent
+    }, {
+        name: 'CheckBoxMe',
+        path: '/checkboxs',
+        component: CheckBoxMe
     }]
 })

@@ -6,6 +6,9 @@
     <router-link to="/contain">容器</router-link>
     <router-link to="/table">表格</router-link>
     <router-link to="/tree">树状图</router-link>
+    <router-link to="/radio">单选</router-link>
+    <router-link to="/selfComponent">自定义组件</router-link>
+    <router-link to="/checkboxs">多选框</router-link>
     <router-view/>
     <footer>{{autor}}</footer>
   </div>
@@ -40,5 +43,10 @@ a{
 }
 .router-link-active{
   color:cadetblue;
+}
+.el-select.my-bg-tg > .el-input input{
+    border-left: 1;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
 }
 </style>
