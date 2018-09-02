@@ -24,5 +24,6 @@ destroy所有的事件监听器会被移除，所有的子实例也会被销毁�
 -------------------------------------------
 vuex用于整体的状态管理，
 主要是state，用于数据的初始化；mutations用于数据模型的重组，方便在组件中调取。getters用于数据的获取，actions用于异步获取数据。目前先了解这么多
-
+调试工具：
+//https://chrome.google.com/webstore/search/devtools
 
