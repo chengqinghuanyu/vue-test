@@ -21,7 +21,7 @@ export default {
                 {value:2,text:"小王"},
                 {value:3,text:"小明"}],
             myselectContent:{
-                value:0,text:"请选择"
+                value:1,text:"小李"
             }
         }
     },

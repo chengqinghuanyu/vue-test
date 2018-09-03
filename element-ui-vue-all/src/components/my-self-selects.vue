@@ -81,7 +81,7 @@
     },
   }
 </script>
-<style>
+<style scoped>
   .select{
     position: relative;
     overflow: hidden;
