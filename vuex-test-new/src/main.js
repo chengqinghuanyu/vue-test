@@ -9,6 +9,7 @@ Vue.prototype.$axios = axios
 axios.defaults.baseURL = 'http://127.0.0.1:3000';
 //axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
 Vue.config.productionTip = false
     /* eslint-disable no-new */
 new Vue({
