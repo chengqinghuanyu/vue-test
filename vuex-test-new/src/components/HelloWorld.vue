@@ -1,100 +1,50 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <h2>vuex-操作数据</h2>
     <div>{{count}}</div>
     <button @click="add">增加</button>
     <button @click="dest">减少</button>
+    <h2>vuex-修改数据同级组件</h2>
     <CityList></CityList>
     <HomeCity></HomeCity>
+    <h2>vuex-设置表单的双向数据绑定</h2>
+    <Form></Form>
+    <h2>get请求数据</h2>
+    <ul>
+      <li v-for="m in list" :key="m.id">
+         <span>{{m.name}}</span>--<span>{{m.num}}</span>
+         <span>{{m.age}}</span>--<span>{{m.sex}}</span>
+      </li>
+    </ul>
+    <h2>处理POST请求</h2>
+    <div><label >用户名</label>
+    <input v-model="uesrInfo.name">
+    </div>
+    <div>
+    <label >电话</label>
+    <input v-model="uesrInfo.tel">
+    </div>
+    <div>
+    <label>地址</label>
+    <input v-model="uesrInfo.address">
+    </div>
+    <div>
+    <label>图像</label>
+    <input v-model="uesrInfo.himg">
+    </div>
+    <button @click="submit">提交</button>
   </div>
 </template>
 
 <script>
 import CityList from './CityList'
 import HomeCity from './HomeCity'
+import Form from './Form'
 export default {
   name: 'HelloWorld',
   components:{
-    CityList,HomeCity
+    CityList,HomeCity,Form
   },
   computed:{
     count(){
@@ -103,8 +53,33 @@ export default {
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'vue精进',
+      list:[],
+      uesrInfo:{
+        name:'',
+        address:'',
+        tel:'',
+        himg:''
+      }
+      
     }
+  },
+  created() {
+    console.log(11)
+    let that = this;
+    this.$axios.get('/api/getdatas',{
+      params: {
+        ID: 12345
+      }
+    }).then(function(res){
+      console.log(res)
+      if(res.data.data.length){
+        that.list = res.data.data
+        console.log(that.list)
+      }
+    }).catch(function(err){
+      console.log(err)
+    })
   },
   methods:{
     add:function(){
@@ -115,6 +90,21 @@ export default {
     },
     dest(){
       this.$store.commit('desincurrent')
+    },
+    submit(){
+      let that = this;
+      that.uesrInfo = JSON.parse(JSON.stringify(that.uesrInfo));
+      this.$axios.post('/api/submit/userinfo',{
+          name:that.uesrInfo.name,
+          address:that.uesrInfo.address,
+          tel:that.uesrInfo.tel,
+          himg:that.uesrInfo.himg
+      }).then(function(res){
+        console.log(res)
+      }).catch(function(err){
+        console.log(err)
+      })
+      
     }
   }
 }
@@ -130,7 +120,6 @@ ul {
   padding: 0;
 }
 li {
-  display: inline-block;
   margin: 0 10px;
 }
 a {

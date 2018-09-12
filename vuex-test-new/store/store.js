@@ -4,7 +4,10 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         count: 0,
-        city: '城市名称'
+        city: '城市名称',
+        obj: {
+            message: ''
+        }
     },
     getters: {
         getCount(state) {
@@ -25,6 +28,10 @@ const store = new Vuex.Store({
         },
         setCity(state, name) {
             state.city = name
+        },
+        getValue(state, val) {
+            console.log(val)
+            state.obj.message = val
         }
     },
     actions: {
