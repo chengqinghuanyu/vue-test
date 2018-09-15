@@ -34,6 +34,11 @@
     <input v-model="uesrInfo.himg">
     </div>
     <button @click="submit">提交</button>
+
+    <h2>设定区域</h2>
+    <textarea-compute :max-length="myMaxLength" :my-placeholder="myPlaceholder" @get-area-data="getAreaDatas" :supser-class="supserClass"></textarea-compute>
+
+    <textarea-compute :max-length="myMaxLength" :my-placeholder="myPlaceholder" @get-area-data="getAreaDatas" :supser-class="myClass"></textarea-compute>
   </div>
 </template>
 
@@ -41,10 +46,12 @@
 import CityList from './CityList'
 import HomeCity from './HomeCity'
 import Form from './Form'
+
+import TextareaCompute from './TextareaCompute'
 export default {
   name: 'HelloWorld',
   components:{
-    CityList,HomeCity,Form
+    CityList,HomeCity,Form,TextareaCompute
   },
   computed:{
     count(){
@@ -60,7 +67,11 @@ export default {
         address:'',
         tel:'',
         himg:''
-      }
+      },
+      myMaxLength:300,
+      myPlaceholder:'请输入',
+      supserClass:'a-sp',
+      myClass:'bp'
       
     }
   },
@@ -105,13 +116,16 @@ export default {
         console.log(err)
       })
       
+    },
+    getAreaDatas(v){
+      console.log(v);
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style >
 h1, h2 {
   font-weight: normal;
 }
@@ -125,4 +139,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>
