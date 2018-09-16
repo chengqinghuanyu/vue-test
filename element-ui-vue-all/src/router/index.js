@@ -16,6 +16,9 @@ import CheckBoxMe from '@/components/CheckBoxMe'
 import MyModelTest from '@/components/MyModelTest'
 import ChinaProAreaData from '@/components/ChinaProAreaData'
 import MySelfSelect from '@/components/MySelfSelect'
+import TimeRange from '@/components/TimeRange'
+import Tips from '@/components/Tips'
+import Job from '@/components/Job'
 Vue.use(Router)
 
 export default new Router({
@@ -88,6 +91,16 @@ export default new Router({
             name: 'MySelfSelect',
             path: '/myselfselect',
             component: MySelfSelect
+        },
+        {
+            name: 'TimeRange',
+            path: '/timerange',
+            component: TimeRange
+        }, {
+
+            name: 'Tips',
+            path: '/tips',
+            component: Tips
         }
     ]
 })
