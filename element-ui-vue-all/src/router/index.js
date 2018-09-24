@@ -19,6 +19,9 @@ import MySelfSelect from '@/components/MySelfSelect'
 import TimeRange from '@/components/TimeRange'
 import Tips from '@/components/Tips'
 import Job from '@/components/Job'
+import Crop from '../views/crops/crop'
+
+import SelectFunction from '../views/selectfunction/selectfunction'
 Vue.use(Router)
 
 export default new Router({
@@ -101,6 +104,14 @@ export default new Router({
             name: 'Tips',
             path: '/tips',
             component: Tips
+        }, {
+            name: 'Crop',
+            path: '/crop',
+            component: Crop
+        }, {
+            name: 'SelectFunction',
+            path: '/selectfunction',
+            component: SelectFunction
         }
     ]
 })

@@ -14,6 +14,8 @@
      <router-link to="/chinaareadata">地址</router-link>
      <router-link to="/timerange">时间范围</router-link>
      <router-link to="/tips">提示</router-link>
+     <router-link to="/crop">裁剪</router-link>
+     <router-link to="/selectfunction">城市选择</router-link>
      
       <!-- <router-link to="/job">职位对接人</router-link> -->
      

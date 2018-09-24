@@ -1,0 +1,74 @@
+ul,
+p,
+li {
+    margin: 0;
+    padding: 0
+}
+
+ul {
+    list-style: none
+}
+
+#super_citys>div {
+    border: 1px solid #ccc;
+    height: 33px;
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+    text-indent: 10px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    /* background: url(../img/select_bg_img.png) no-repeat right center; */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#super_citys>div>div {
+    overflow: hidden;
+    padding-right: 24px;
+    font-size: 13px
+}
+
+.shadow {
+    border: 1.5px solid #1e90ff !important
+}
+
+#super_citys>div>ul {
+    width: 100%;
+    border: 2px solid #1e90ff !important;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+    overflow-y: scroll;
+    height: 0;
+    display: none;
+    box-sizing: border-box;
+    background: #fff
+}
+
+#super_citys>div>ul>li {
+    font-size: 15px;
+    text-indent: 10px;
+    cursor: pointer;
+    overflow: hidden
+}
+
+#super_citys>div>ul>li:hover {
+    background: #1e90ff;
+    color: #fff
+}
+
+.btn {
+    width: 90px;
+    height: 33px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    background: #1e90ff;
+    border-radius: 5px
+}
