@@ -25,7 +25,8 @@ import SelectFunction from '../views/selectfunction/selectfunction'
 Vue.use(Router)
 
 export default new Router({
-    mode: 'history',
+    //mode: 'history',
+    mode: 'hash',
     routes: [{
             path: '/',
             name: 'HelloWorld',
